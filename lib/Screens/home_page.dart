@@ -17,19 +17,47 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( 
-        iconTheme: IconThemeData(size: 36.0, color: Colors.black87),
-        title: Text("Download-YouTube",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        elevation: 0.0,
-        backgroundColor: Colors.black87,
-      ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(130),
+        child: Container(
+          height: 130,
+          color: Colors.black87,
+          child: Center(
+            child: ListTile(
+              leading: Container(
+                child: Center(
+                  child: Icon(Icons.play_arrow_rounded, size: 40, color: Colors.white,)
+                ),
+                height: 48,
+                width: 58,
+                decoration: BoxDecoration(
+                  color: Colors.red, 
+                  borderRadius: BorderRadius.circular(5)
+                ),
+              ),
+              title: Text("Download",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
 
+              subtitle: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Text("-YouTube", 
+                  style: TextStyle(
+                    color: Colors.red,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+
+            ),
+          ),),
+      ),
+      
       body: pages[_currentIndex],
 
 
