@@ -61,7 +61,7 @@ class _PasteLinkPageState extends State<PasteLinkPage> {
             ///Download Buntton for extrating and download the link
             
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 100),
+              padding: const EdgeInsets.symmetric(vertical: 50),
               child: FloatingActionButton.extended(
                 backgroundColor: Colors.black87,
                 onPressed: (){
